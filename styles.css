@@ -1,38 +1,43 @@
+/* Estilos Gerais */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #9edf8b, #9de760);
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b, #ffb6b9, #dcb0d2, #a6c0fe);
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinha os itens no topo */
+    align-items: flex-start;
     flex-direction: column;
-    height: 100vh;
-    overflow-y: auto; /* Permite rolar verticalmente */
+    height: 210vh;
+    overflow-y: auto;
 }
-
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza as imagens */
-    width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
-    padding: 20px; /* Um pequeno espaço nas bordas */
-    box-sizing: border-box; /* Para garantir que o padding não afete a largura */
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 h1 {
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
-    margin-bottom: 20px; /* Adiciona um pequeno espaço abaixo do título */
-    margin-top: 500px;  /* Adiciona um espaço acima do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-top: 20px; /* Espaço ajustado acima do título */
 }
 
+
+/* Estilo para Contêiner de Imagem */
 .image-container {
     position: relative;
-    display: block; /* Faz com que as imagens fiquem empilhadas */
-    margin: 20px;
-    text-align: center; /* Centraliza as imagens dentro do container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .image-container img {
@@ -90,6 +95,29 @@ h1 {
     }
 }
 
+/* Textos Animados */
+.animated-text p {
+    font-size: 1.5rem;
+    color: #f1106a;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -106,9 +134,10 @@ button:hover {
     background-color: #ff5a4d;
 }
 
+/* Mensagem Oculta */
 .hidden-message {
     display: none;
-    color: #fff;
+    color: #f1106a;
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
